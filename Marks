@@ -69,3 +69,32 @@ public class Main{
     
   }
 }
+
+
+
+
+https://coderoad.ru/47366788/Java-удалить-знаки-препинания-в-строке-также-и-все-эти-сохраняя-символы
+https://javatalks.ru/topics/21618?page=2
+http://espressocode.top/removing-punctuations-given-string/
+https://fooobar.com/questions/82449/converting-to-upper-and-lower-case-in-java
+https://ru.stackoverflow.com/questions/107220/Количество-слов-в-строке
+http://proglang.su/java/characters
+
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		String myStr = "апапаФФФФ";
+		char arr [] = myStr.toCharArray();
+		for (int i = 0; i < arr.length; i++){
+		    if (Character.isLetter(arr[i]) &&  Character.isLowerCase(arr[i])){
+		        arr[i] = (char)(arr[i] - 32);
+		    } else if (Character.isLetter(arr[i]) &&  Character.isUpperCase(arr[i])){
+		        arr[i] = (char)(arr[i] + 32);
+		    } 
+		}
+		String str = new String(arr);
+		System.out.print(str);
+	}
+}
