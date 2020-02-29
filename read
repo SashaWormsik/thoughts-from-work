@@ -29,3 +29,35 @@ public class ReadFileLineByLine {
     }
  
 }
+
+
+import java.io.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    File AllCard = new File("D:\AllCard.txt");
+		
+	}
+	class bankCard {
+	    long numberCard;
+	    short pinCode;
+	    String firstName;
+	    String secondName;
+	    File AllCard = new File("D:/AllCard.txt");
+	    
+	    public bankCard(String firstName, String secondName, long numberCard, short pinCode){
+	        this.firstName = firstName;
+	        this.secondName = secondName;
+	        this.numberCard = numberCard;
+	        this.pinCode = pinCode;
+	        /*
+	        записываем данную инфу в файл в этом же пакете в конец.
+	        (т.е добавляем в конец)
+	        */
+	        File AllCard = new File("D:/AllCard.txt");
+	        String card = String.format("Name |%s %s| numberCard |%d| pin |%d|", firstName, secondName, numberCard, pinCode)
+	        
+	    }
+	}
+}
