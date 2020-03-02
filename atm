@@ -8,3 +8,20 @@
           }
          
       }
+
+
+
+  public static void main (String[]args){
+      LinkedHashMap<Integer, Integer> arr = new LinkedHashMap();
+      arr.put(100, 10);
+      arr.put(50, 10);
+      arr.put(20, 10);
+      System.out.print(arr);
+      LinkedHashMap<Integer, Integer> bank = new LinkedHashMap();
+      int summ = 220;
+      for (Integer key: arr.keySet()){
+          int n = summ/key;
+          summ -= n*key;
+          bank.put(key, n);
+      }
+      System.out.print(bank+" "+summ);
