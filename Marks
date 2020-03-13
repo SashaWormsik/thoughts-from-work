@@ -98,3 +98,7 @@ public class Main
 		System.out.print(str);
 	}
 }
+
+
+
+https://ru.stackoverflow.com/questions/408856/Как-использовать-лямбда-выражения-в-java-8
