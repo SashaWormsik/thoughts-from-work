@@ -1,0 +1,24 @@
+class Buffer:
+    def __init__(self):
+        self.buf_val = list()
+        self.buf = list()
+
+    def add(self, *a):
+        self.buf_val.extend(a[0:5])
+        if len(self.buf_val) == 5:
+            print(sum(self.buf_val))
+        self.buf.extend(a[5:])
+
+    def get_current_part(self):
+        return self.buf
+
+
+buf = Buffer()
+buf.add(1, 2, 3)
+print(buf.get_current_part())
+buf.add(4, 5, 6)
+print(buf.get_current_part())
+buf.add(7, 8, 9, 10)
+print(buf.get_current_part())
+buf.add(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+print(buf.get_current_part())
